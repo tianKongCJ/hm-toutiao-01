@@ -70,7 +70,7 @@ export default {
             this.$router.push('/')
           }).catch(() => {
             // 失败 提示
-            this.$message.error('手机号或验证码错误')
+            this.$message.error('手机号或验证码错误哦')
           })
         }
       })

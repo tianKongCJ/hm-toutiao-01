@@ -8,6 +8,10 @@ import 'element-ui/lib/theme-chalk/index.css'
 // 导入router对象 @代表 src的绝对路径
 import router from '@/router'
 
+// 导入axios包 简单配置
+import axios from 'axios'
+Vue.prototype.$http = axios
+
 // 注册element-ui组件
 Vue.use(ElementUI)
 

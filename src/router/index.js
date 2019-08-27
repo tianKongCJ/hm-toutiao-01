@@ -22,6 +22,9 @@ import store from '@/store'
 // 导入测试test文件
 import Test from '@/views/test'
 
+// 导入 Article 组件
+import Article from '@/views/article'
+
 // 注册路由,并使用
 Vue.use(VueRouter)
 
@@ -39,7 +42,9 @@ const router = new VueRouter({
       path: '/',
       component: Home,
       // 欢迎页面 如果子路由有名字,父级路由的名字要删除
-      children: [{ path: '/', name: 'welcome', component: Welcome }]
+      children: [{ path: '/', name: 'welcome', component: Welcome },
+        { path: '/article', name: 'article', component: Article }
+      ]
     },
     { path: '/test', name: 'test', component: Test },
     // 404 处理通配

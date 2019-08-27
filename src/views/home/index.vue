@@ -4,8 +4,12 @@
             <!-- logo -->
             <div class="logo" :class="{miniLogo:isCollapse}"></div>
             <!-- 导航菜单 -->
+                <!-- el-submenu 拥有子菜单的菜单项 el-menu-item 是没有子菜单的选项-->
+                <!-- el-menu-item index="/" 要根据当前路径来设置 this.$route.path -->
+                <!-- this.$route 获取路由的数据      this.$router 调用路由的方法-->
+                <!-- 获取地址栏传参: user?id=100 this.$route.query.id   /user/100 this.$route.params.id -->
             <el-menu
-                default-active="/"
+                :default-active="$route.path"
                 class="el-menu-vertical-demo"
                 background-color="#002033"
                 text-color="#fff"
@@ -13,7 +17,6 @@
                 :collapse="isCollapse"
                 :collapse-transition="false"
                 router>
-                <!-- el-submenu 拥有子菜单的菜单项 el-menu-item 是没有子菜单的选项-->
                 <el-menu-item index="/">
                     <i class="el-icon-s-home"></i>
                     <span slot="title">首页</span>

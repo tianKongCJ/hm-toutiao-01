@@ -10,6 +10,11 @@ import router from '@/router'
 
 // 导入axios包 简单配置
 import axios from '@/api'
+
+// 导入插件
+import myPlugin from '@/components'
+Vue.use(myPlugin)
+
 Vue.prototype.$http = axios
 
 // 注册element-ui组件

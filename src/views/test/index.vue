@@ -1,10 +1,26 @@
 <template>
-    <div class="container">Test</div>
+    <div class="container">
+      <com-a>
+        <div slot="content">con1</div>
+        <div slot="footer">foot1</div>
+      </com-a>
+      <hr>
+      <com-a>
+        <div slot="content">con2</div>
+        <div slot="footer">foot2</div>
+      </com-a>
+      <hr>
+      <com-a></com-a>
+    </div>
 </template>
 
 <script>
+import ComA from '@/components/com-a.vue'
 export default {
-//   async created () {
+  components: {
+    ComA
+  }
+  //   async created () {
   // 使用 promise 方式
   // 调用 a 接口
   // this.$http.get('http://localhost:3000/a').then(res => {
